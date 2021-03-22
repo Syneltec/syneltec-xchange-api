@@ -44,8 +44,11 @@ public class Account {
    * Whether or not it is possible to deposit into this account.
    */
   private boolean canDeposit;
-
+  
+  private long      updateTime;
+  private String    accountType;
   private List<AssetBalance> balances;
+  private List<String>       permissions;
 
   public int getMakerCommission() {
     return makerCommission;
@@ -99,8 +102,28 @@ public class Account {
     return canDeposit;
   }
 
-  public void setCanDeposit(boolean canDeposit) {
-    this.canDeposit = canDeposit;
+  public long getUpdateTime() {
+    return updateTime;
+  }
+
+  public void setUpdateTime(long updateTime) {
+    this.updateTime = updateTime;
+  }
+
+  public String getAccountType() {
+    return accountType;
+  }
+
+  public void setAccountType(String accountType) {
+    this.accountType = accountType;
+  }
+
+  public List<String> getPermissions() {
+    return permissions;
+  }
+
+  public void setPermissions(List<String> permissions) {
+    this.permissions = permissions;
   }
 
   public List<AssetBalance> getBalances() {
@@ -140,7 +163,10 @@ public class Account {
         .append("canTrade", canTrade)
         .append("canWithdraw", canWithdraw)
         .append("canDeposit", canDeposit)
+        .append("updateTime", updateTime)
+        .append("accountType", accountType)
         .append("balances", balances)
+        .append("permissions", permissions)
         .toString();
   }
 }
