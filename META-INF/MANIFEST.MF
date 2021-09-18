@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: binance-java-api
-Bundle-SymbolicName: syneltec-binance-api
+Bundle-SymbolicName: syneltec-BinanceAPI;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: binance.java.api
@@ -20,3 +20,5 @@ Export-Package: com.binance.api.client,
  com.binance.api.domain.event,
  com.binance.api.domain.market,
  com.binance.api.examples
+Bundle-ClassPath: .
+Bundle-ActivationPolicy: lazy
